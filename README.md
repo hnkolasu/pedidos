@@ -1,6 +1,6 @@
 # Projeto Angular - Sistema de Pedidos
 
-Este projeto é uma aplicação Angular para gerenciar pedidos, produtos e operações relacionadas, como adicionar, remover produtos e fechar pedidos.
+Este projeto é uma aplicação Angular para gerenciar pedidos
 
 ## Descrição do Projeto
 
