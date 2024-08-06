@@ -1,0 +1,11 @@
+<div class="adicionar-produto">
+  <input [(ngModel)]="titulo" placeholder="Titulo do Produto" />
+  <input [(ngModel)]="descricao" placeholder="Descrição do Produto" />
+  <button
+    [disabled]="!(titulo && descricao) && descricao.length <= 50"
+    class="button"
+    (click)="adicionarProduto()"
+  >
+    Enviar
+  </button>
+</div>

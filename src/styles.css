@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+.button {
+  cursor: pointer;
+  background-color: #cccccc;
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #bcbcbc;
+}
+.button:active {
+  background-color: #9c9c9c;
+}
+
+.button:disabled {
+  background-color: #d6d4d4;
+  color: #6e6e6e;
+  cursor: default;
+}
+
+.pedidos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pedido {
+  max-width: 500px;
+  gap: 24px;
+  display: flex;
+  padding: 12px;
+  border: 1px solid #9d9d9d;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.produto {
+  gap: 12px;
+  display: flex;
+  padding: 12px;
+  border: 1px solid #c9c9c9;
+  border-radius: 12px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pedido-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adicionar-produto {
+  display: flex;
+  gap: 12px;
+}

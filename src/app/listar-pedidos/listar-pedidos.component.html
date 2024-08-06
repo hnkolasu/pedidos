@@ -1,0 +1,14 @@
+<h2>Lista de Pedidos</h2>
+
+<div class="pedidos">
+  <div>
+    Filtrar pedidos por:
+    <select [(ngModel)]="filtro" name="filtro" id="filtro">
+      <option value="todos">Todos</option>
+      <option value="false">Abertos</option>
+      <option value="true">Fechados</option>
+    </select>
+  </div>
+
+  <pedido *ngFor="let pedido of pedidosFiltrados" [pedido]="pedido"> </pedido>
+</div>

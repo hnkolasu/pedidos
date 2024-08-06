@@ -1,0 +1,40 @@
+<div *ngIf="pedido">
+  <div class="pedido">
+    <div class="pedido-header">
+      Pedido {{ pedido.id }} - {{ pedido.fechado ? "Fechado" : "Aberto" }}
+
+      <button
+        class="button"
+        *ngIf="!pedido.fechado"
+        [disabled]="!(pedido.produtos && pedido.produtos.length > 0)"
+        (click)="fecharPedido()"
+      >
+        Fechar Pedido
+      </button>
+    </div>
+
+    <div *ngIf="!pedido.fechado">
+      <button
+        class="button"
+        *ngIf="!adicionandoProduto"
+        (click)="toggleAdicionarProduto()"
+      >
+        Adicionar Produto
+      </button>
+
+      <adicionar-produto
+        *ngIf="adicionandoProduto"
+        [pedidoId]="pedido.id"
+      ></adicionar-produto>
+    </div>
+
+    <div class="produtos">
+      Produtos:
+      <produto
+        *ngFor="let produto of pedido.produtos"
+        [produto]="produto"
+        [pedido]="pedido"
+      ></produto>
+    </div>
+  </div>
+</div>

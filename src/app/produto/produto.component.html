@@ -1,0 +1,12 @@
+<div *ngIf="produto && pedido" class="produto">
+  Produto {{ produto.id }}:
+  {{ produto.titulo }}
+  {{ produto.descricao }}
+
+  <remover-produto
+    *ngIf="pedido && !pedido.fechado"
+    [idPedido]="pedido.id"
+    [idProduto]="produto.id"
+  >
+  </remover-produto>
+</div>
